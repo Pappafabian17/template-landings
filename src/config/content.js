@@ -2,6 +2,19 @@ const placeholder = (w, h, text) =>
   `https://placehold.co/${w}x${h}/f0e6d3/7a5c3a?text=${encodeURIComponent(text)}`;
 
 export const content = {
+  meta: {
+    title: "Sas solutions — Velas artesanales",
+    description:
+      "Velas artesanales hechas con ceras naturales y fragancias premium. Perfectas para regalar o para crear tu momento de calma. Envíos a todo el país.",
+    keywords:
+      "velas artesanales, velas aromáticas, emprendimiento, velas naturales, regalo",
+    url: "https://tusitio.com", // URL canónica del sitio
+    image: null, // URL de imagen para compartir en redes (og:image)
+    themeColor: "#c8831a", // color de la barra del navegador en móvil
+    locale: "es_AR",
+    twitterHandle: "@sassoluciones", // null si no tenés Twitter/X
+  },
+
   brand: {
     name: "Sas solutions",
     logo: null,
