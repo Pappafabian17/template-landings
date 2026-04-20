@@ -1,5 +1,20 @@
 .hero {
-  background: linear-gradient(135deg, var(--color-bg) 60%, var(--color-bg-alt) 100%);
+  background: radial-gradient(ellipse 80% 60% at 70% 50%, rgba(232, 168, 74, 0.18) 0%, transparent 70%),
+              radial-gradient(ellipse 50% 40% at 10% 80%, rgba(181, 85, 58, 0.10) 0%, transparent 60%),
+              var(--color-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '🕯️';
+  position: absolute;
+  font-size: 12rem;
+  opacity: 0.04;
+  right: -2rem;
+  bottom: -2rem;
+  pointer-events: none;
+  user-select: none;
 }
 
 .hero__inner {
@@ -7,16 +22,37 @@
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: var(--space-3xl);
-  min-height: calc(100vh - 64px);
+  min-height: calc(100vh - 68px);
+}
+
+.hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  padding: 0.3rem 1rem;
+  font-size: var(--text-xs);
+  font-weight: var(--font-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-primary);
+  margin-bottom: var(--space-lg);
 }
 
 .hero__title {
   font-family: var(--font-heading);
   font-size: var(--text-5xl);
   font-weight: var(--font-bold);
-  line-height: 1.15;
+  line-height: 1.1;
   color: var(--color-text);
   margin-bottom: var(--space-lg);
+}
+
+.hero__title em {
+  font-style: italic;
+  color: var(--color-primary);
 }
 
 .hero__subtitle {
@@ -34,11 +70,23 @@
 }
 
 .hero__image-wrap {
+  position: relative;
   display: flex;
   justify-content: center;
 }
 
+.hero__image-wrap::before {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(ellipse, rgba(232, 168, 74, 0.2) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
 .hero__image {
+  position: relative;
+  z-index: 1;
   width: 100%;
   max-width: 500px;
   border-radius: var(--radius-lg);
@@ -46,10 +94,12 @@
 }
 
 .hero__image-placeholder {
+  position: relative;
+  z-index: 1;
   width: 100%;
   max-width: 500px;
   aspect-ratio: 4 / 3;
-  background-color: var(--color-bg-alt);
+  background: linear-gradient(135deg, var(--color-bg-alt), var(--color-border));
   border: 2px dashed var(--color-border);
   border-radius: var(--radius-lg);
   display: flex;
@@ -65,6 +115,11 @@
     min-height: auto;
     padding: var(--space-3xl) 0;
     text-align: center;
+  }
+
+  .hero__eyebrow {
+    display: inline-flex;
+    margin: 0 auto var(--space-lg);
   }
 
   .hero__subtitle {

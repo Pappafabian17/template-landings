@@ -1,0 +1,182 @@
+.testimonials__carousel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+/* Track — 3 cards visibles */
+.testimonials__track {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Flechas */
+.testimonials__arrow {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: 1.6rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+  cursor: pointer;
+}
+
+.testimonials__arrow:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  transform: scale(1.08);
+}
+
+/* Dots */
+.testimonials__dots {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-xl);
+}
+
+.testimonials__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-border);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.testimonials__dot--active {
+  background-color: var(--color-primary);
+  width: 24px;
+  border-radius: var(--radius-full);
+}
+
+/* Card */
+.tcard {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  transition: box-shadow var(--transition), transform var(--transition);
+  animation: fadeSlide 0.35s ease;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateX(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.tcard:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.tcard--active {
+  border-color: var(--color-primary-light);
+}
+
+/* Estrellas */
+.stars {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  font-size: 1.1rem;
+}
+
+.star--on  { color: var(--color-primary); }
+.star--off { color: var(--color-border); }
+
+/* Texto */
+.tcard__text {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  flex: 1;
+  font-style: italic;
+}
+
+/* Autor */
+.tcard__author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.tcard__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.tcard__avatar--initials {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-sm);
+  font-weight: var(--font-bold);
+  letter-spacing: 0.05em;
+}
+
+.tcard__name {
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-text);
+}
+
+.tcard__role {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .testimonials__track {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonials__track .tcard:last-child {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .testimonials__track {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials__track .tcard:not(:first-child) {
+    display: none;
+  }
+
+  .testimonials__arrow {
+    display: none;
+  }
+}

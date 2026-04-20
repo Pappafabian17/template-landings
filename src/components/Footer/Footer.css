@@ -1,6 +1,7 @@
 .footer {
   background-color: var(--color-bg-dark);
   color: var(--color-text-light);
+  border-top: 1px solid rgba(255,255,255,0.06);
   padding-top: var(--space-3xl);
 }
 
@@ -16,20 +17,21 @@
 .footer__logo {
   height: 32px;
   margin-bottom: var(--space-sm);
-  filter: brightness(0) invert(1); /* invierte a blanco si el logo es oscuro */
+  filter: brightness(0) invert(1);
 }
 
 .footer__brand-name {
+  font-family: var(--font-heading);
   font-size: var(--text-xl);
   font-weight: var(--font-bold);
-  color: var(--color-primary-light);
+  color: var(--color-accent);
   display: block;
   margin-bottom: var(--space-sm);
 }
 
 .footer__tagline {
   font-size: var(--text-sm);
-  color: var(--color-text-muted);
+  color: rgba(250, 247, 242, 0.45);
   max-width: 280px;
 }
 
@@ -41,12 +43,13 @@
 
 .footer__link {
   font-size: var(--text-sm);
-  color: var(--color-text-muted);
+  color: rgba(250, 247, 242, 0.5);
   transition: color var(--transition);
+  position: relative;
 }
 
 .footer__link:hover {
-  color: var(--color-text-light);
+  color: var(--color-accent);
 }
 
 .footer__bottom {
@@ -55,7 +58,7 @@
 
 .footer__copy {
   font-size: var(--text-xs);
-  color: var(--color-text-muted);
+  color: rgba(250, 247, 242, 0.3);
 }
 
 @media (max-width: 640px) {

@@ -8,6 +8,7 @@ export function Hero() {
     <section className="hero section" id="hero">
       <div className="container hero__inner">
         <div className="hero__text">
+          <span className="hero__eyebrow">🕯️ Emprendimiento artesanal</span>
           <h1 className="hero__title">{hero.title}</h1>
           <p className="hero__subtitle">{hero.subtitle}</p>
           <div className="hero__actions">

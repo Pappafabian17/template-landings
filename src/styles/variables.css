@@ -4,31 +4,33 @@
 
 :root {
   /* --- Colores principales --- */
-  --color-primary: #6366f1;
-  --color-primary-dark: #4f46e5;
-  --color-primary-light: #818cf8;
+  --color-primary: #c8831a;
+  --color-primary-dark: #a86a10;
+  --color-primary-light: #e8a84a;
 
-  --color-secondary: #f59e0b;
-  --color-secondary-dark: #d97706;
+  --color-secondary: #b5553a;
+  --color-secondary-dark: #8f3f28;
+
+  --color-accent: #e8c87a;
 
   /* --- Fondos --- */
-  --color-bg: #ffffff;
-  --color-bg-alt: #f8fafc;   /* sección alternada */
-  --color-bg-dark: #0f172a;  /* footer / sección oscura */
+  --color-bg: #faf7f2;
+  --color-bg-alt: #f0e6d3;
+  --color-bg-dark: #1c1008;
 
   /* --- Textos --- */
-  --color-text: #1e293b;
-  --color-text-muted: #64748b;
-  --color-text-light: #f8fafc;
+  --color-text: #2d1b0e;
+  --color-text-muted: #7a6552;
+  --color-text-light: #faf7f2;
 
   /* --- Bordes y sombras --- */
-  --color-border: #e2e8f0;
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.10);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.14);
+  --color-border: #e0d0bc;
+  --shadow-sm: 0 1px 3px rgba(44, 27, 8, 0.08);
+  --shadow-md: 0 4px 20px rgba(44, 27, 8, 0.12);
+  --shadow-lg: 0 8px 40px rgba(44, 27, 8, 0.16);
 
   /* --- Tipografía --- */
-  --font-heading: 'Segoe UI', system-ui, sans-serif;
+  --font-heading: 'Georgia', 'Times New Roman', serif;
   --font-body: 'Segoe UI', system-ui, sans-serif;
 
   --text-xs:   0.75rem;
@@ -67,5 +69,5 @@
   --radius-full: 9999px;
 
   /* --- Transiciones --- */
-  --transition: 0.2s ease;
+  --transition: 0.25s ease;
 }
